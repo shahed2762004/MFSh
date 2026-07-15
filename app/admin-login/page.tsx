@@ -117,7 +117,9 @@ export default function AdminLoginPage() {
                 {otp.map((digit, i) => (
                   <input
                     key={i}
-                    ref={(el) => (inputsRef.current[i] = el)}
+                    ref={(el) => {
+                        inputsRef.current[i] = el;
+                      }}
                     value={digit}
                     onChange={(e) => handleOtpChange(i, e.target.value)}
                     onKeyDown={(e) => handleOtpKeyDown(i, e)}
