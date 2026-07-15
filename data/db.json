@@ -1,0 +1,35 @@
+{
+  "tenants": [
+    { "id": "t_demo", "name": "مجموعة مطاعم الشام", "plan": "Business", "branches": 5 },
+    { "id": "t_retail", "name": "سلسلة أسواق الفرات", "plan": "Starter", "branches": 1 }
+  ],
+  "users": [
+    {
+      "id": "u_admin",
+      "tenantId": "t_demo",
+      "name": "سارة المسؤولة",
+      "email": "admin@matchflow.io",
+      "passwordHash": "6f2cb9dd8f4b65e24e1c3f3fa5bc57982349237f11abceacd45bbcb74d621c25",
+      "role": "admin"
+    },
+    {
+      "id": "u_demo",
+      "tenantId": "t_demo",
+      "name": "أحمد من الفريق المالي",
+      "email": "demo@matchflow.io",
+      "passwordHash": "11eecee636899469c8f0db8c75282b38a997496a4bf6a2babc77e4480b6f9bea",
+      "role": "user"
+    }
+  ],
+  "transactions": [
+    { "id": "tx_1", "tenantId": "t_demo", "source": "جوال باي", "branch": "فرع رام الله", "amount": 184.0, "status": "matched", "matchedWith": "دفتر الأستاذ #4471", "date": "2026-07-10" },
+    { "id": "tx_2", "tenantId": "t_demo", "source": "بال باي", "branch": "فرع نابلس", "amount": 312.5, "status": "matched", "matchedWith": "دفتر الأستاذ #4472", "date": "2026-07-10" },
+    { "id": "tx_3", "tenantId": "t_demo", "source": "دفتر الأستاذ", "branch": "فرع الخليل", "amount": 97.0, "status": "matched", "matchedWith": "دفتر الأستاذ #4473", "date": "2026-07-11" },
+    { "id": "tx_4", "tenantId": "t_demo", "source": "كشف بنك فلسطين", "branch": "فرع رام الله", "amount": 1240.0, "status": "exception", "note": "لا يوجد طلب مطابق بنفس المبلغ", "date": "2026-07-11" },
+    { "id": "tx_5", "tenantId": "t_demo", "source": "جوال باي", "branch": "فرع نابلس", "amount": 58.75, "status": "exception", "note": "عملية مكرّرة محتملة", "date": "2026-07-12" },
+    { "id": "tx_6", "tenantId": "t_demo", "source": "بال باي", "branch": "فرع الخليل", "amount": 205.0, "status": "matched", "matchedWith": "دفتر الأستاذ #4477", "date": "2026-07-12" },
+    { "id": "tx_7", "tenantId": "t_demo", "source": "Excel يدوي", "branch": "فرع رام الله", "amount": 430.2, "status": "exception", "note": "فرق مبلغ قدره 12.5 ₪", "date": "2026-07-12" },
+    { "id": "tx_8", "tenantId": "t_retail", "source": "جوال باي", "branch": "الفرع الرئيسي", "amount": 76.0, "status": "matched", "matchedWith": "دفتر الأستاذ #221", "date": "2026-07-12" },
+    { "id": "tx_9", "tenantId": "t_retail", "source": "بال باي", "branch": "الفرع الرئيسي", "amount": 141.3, "status": "exception", "note": "بانتظار مطابقة يدوية", "date": "2026-07-12" }
+  ]
+}

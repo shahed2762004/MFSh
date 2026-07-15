@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f6f1;
+  --bg-alt: #eaece3;
+  --bg-raised: #ffffff;
+  --text: #10241f;
+  --text-dim: #4e5e57;
+  --text-faint: #7c8b84;
+  --primary: #0f5d52;
+  --primary-2: #127566;
+  --primary-soft: #dceae6;
+  --accent: #c99a34;
+  --accent-soft: #f4e7cb;
+  --border: #dbdfd3;
+  --shadow: 0 20px 50px -20px rgba(16, 36, 31, 0.18);
+  --ok: #1e7a5f;
+  --danger: #c25b4a;
+}
+
+html[data-theme="dark"] {
+  --bg: #081714;
+  --bg-alt: #0d211c;
+  --bg-raised: #0f2621;
+  --text: #eff3ee;
+  --text-dim: #a6b7af;
+  --text-faint: #71877e;
+  --primary: #37b69e;
+  --primary-2: #49cbb1;
+  --primary-soft: #123830;
+  --accent: #e9c15e;
+  --accent-soft: #2c2413;
+  --border: #1b3b34;
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+  --ok: #4fce9e;
+  --danger: #e28372;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", "Tajawal", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.digits {
+  font-family: "IBM Plex Mono", monospace;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 7px 14px;
+  border-radius: 999px;
+}
+
+.eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: inline-block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 11px;
+  font-weight: 700;
+  font-size: 14.5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-ghost:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primary-2);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #241b04;
+}
+.btn-accent:hover {
+  filter: brightness(1.06);
+}
+
+.btn-lg {
+  padding: 15px 26px;
+  font-size: 15.5px;
+  border-radius: 13px;
+}
+
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.theme-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--text);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.badge-ok {
+  background: var(--primary-soft);
+  color: var(--ok);
+}
+.badge-warn {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: #1a1406;
+}
