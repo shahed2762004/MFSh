@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -119,6 +120,15 @@ export default function DashboardPage() {
             </table>
           </div>
         </section>
+
+        {session.role === "admin" && (
+          <p className="mt-8 text-sm text-[var(--text-dim)]">
+            أنت مسجّل كمسؤول منصة —{" "}
+            <Link href="/admin" className="text-[var(--primary)] font-bold">
+              الانتقال إلى لوحة الإشراف ←
+            </Link>
+          </p>
+        )}
       </div>
     </main>
   );
