@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   }
 
   const user = db.getUserByEmail(email);
-  if (!user || user.passwordHash !== hashPassword(password)) {
+  if (!user || user.role !== "admin" || user.passwordHash !== password) {
     return NextResponse.json({ error: "بيانات الدخول غير صحيحة" }, { status: 401 });
   }
   if (user.role === "admin") {
