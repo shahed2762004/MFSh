@@ -48,9 +48,9 @@ export default function LoginPage() {
           <div className="inline-flex gap-2 items-center text-xs font-bold bg-white/15 px-3.5 py-1.5 rounded-full mb-5">
             🔒 مساحة عمل خاصة بشركتك
           </div>
-          <h1 className="text-[32px] font-black leading-snug mb-4">يومك المالي، مُطابَقاً قبل أن تبدأ قهوتك</h1>
+          <h1 className="text-[32px] font-black leading-snug mb-4">إدارة عمليات المطابقة بسهولة وأمان</h1>
           <p className="text-sm opacity-90 leading-loose">
-            سجّل الدخول لمتابعة عمليات المطابقة، مراجعة الاستثناءات، وإغلاق حسابات فروعك.
+            تابع عملياتك المالية، راقب حالة المطابقات، واستعرض التقارير في مكان واحد.
           </p>
           <div className="bg-white/10 border border-white/20 rounded-2xl p-4.5 mt-7 backdrop-blur">
             {["جوال باي · فرع رام الله", "بال باي · فرع نابلس", "دفتر الأستاذ · فرع الخليل"].map((row, i) => (
@@ -82,13 +82,17 @@ export default function LoginPage() {
         </div>
         <div className="w-full max-w-sm">
           <Link href="/" className="text-sm text-[var(--text-dim)] mb-7 inline-flex gap-1.5">
-            ← <span>العودة للصفحة الرئيسية</span>
+            ← <span>العودة إلى الموقع</span>
           </Link>
 
           <div className="card p-8 shadow-[0_20px_60px_-25px_rgba(0,0,0,0.35)]">
-            <h2 className="text-2xl font-black mb-2">مرحباً بعودتك</h2>
-            <p className="text-sm text-[var(--text-dim)] mb-7">سجّل الدخول إلى مساحة عمل شركتك في ماتش‌فلو.</p>
-
+           <h2 className="text-2xl font-black mb-2">
+              تسجيل دخول المستخدم
+            </h2>
+            
+            <p className="text-sm text-[var(--text-dim)] mb-7">
+              سجّل الدخول للوصول إلى حسابك وإدارة عمليات المطابقة الخاصة بك.
+            </p>
             <form onSubmit={onSubmit} className="flex flex-col gap-4">
               <div>
                 <label className="block text-xs font-bold mb-1.5 text-[var(--text-dim)]">البريد الإلكتروني</label>
@@ -111,6 +115,15 @@ export default function LoginPage() {
                 />
               </div>
 
+                <div className="flex justify-end">
+                  <Link
+                    href="/forgot-password"
+                    className="text-xs text-[var(--primary)] hover:underline"
+                  >
+                    نسيت كلمة المرور؟
+                  </Link>
+                </div>
+              
               {error && <p className="text-sm text-[var(--danger)]">{error}</p>}
 
               <button type="submit" disabled={loading} className="btn btn-primary w-full py-3.5 mt-1">
