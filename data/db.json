@@ -7,17 +7,17 @@
     {
       "id": "u_admin",
       "tenantId": "t_demo",
-      "name": "سارة المسؤولة",
+      "name": "المهندسة شهد ",
       "email": "admin@matchflow.io",
-      "passwordHash": "6f2cb9dd8f4b65e24e1c3f3fa5bc57982349237f11abceacd45bbcb74d621c25",
+      "passwordHash": "MFlow#2026!",
       "role": "admin"
     },
     {
       "id": "u_demo",
       "tenantId": "t_demo",
-      "name": "أحمد من الفريق المالي",
+      "name": "",
       "email": "demo@matchflow.io",
-      "passwordHash": "11eecee636899469c8f0db8c75282b38a997496a4bf6a2babc77e4480b6f9bea",
+      "passwordHash": "Access!A91",
       "role": "user"
     }
   ],
