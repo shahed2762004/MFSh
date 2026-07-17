@@ -10,15 +10,21 @@ export async function POST(req: NextRequest) {
   }
 
   const user = db.getUserByEmail(email);
-  if (!user || user.role !== "admin" || user.passwordHash !== password) {
-    return NextResponse.json({ error: "بيانات الدخول غير صحيحة" }, { status: 401 });
-  }
-  if (user.role === "admin") {
-    return NextResponse.json(
-      { error: "هذا حساب إداري. الرجاء استخدام دخول الإدارة." },
-      { status: 403 }
-    );
-  }
+
+if (!user || user.passwordHash !== password) {
+  return NextResponse.json(
+    { error: "بيانات الدخول غير صحيحة" },
+    { status: 401 }
+  );
+}
+
+// منع الأدمن من استخدام صفحة المستخدم
+if (user.role === "admin") {
+  return NextResponse.json(
+    { error: "هذا حساب إداري. الرجاء استخدام صفحة دخول الإدارة." },
+    { status: 403 }
+  );
+}
 
   const token = createToken({
     uid: user.id,
