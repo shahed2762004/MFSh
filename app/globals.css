@@ -3,51 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --bg: #ffffff;
-  --bg-alt: #f8fafc;
+  --bg: #faf8fd;
+  --bg-alt: #f3effb;
   --bg-raised: #ffffff;
 
-  --text: #111827;
-  --text-dim: #6b7280;
-  --text-faint: #9ca3af;
+  --text: #2d2440;
+  --text-dim: #6d6483;
+  --text-faint: #9a91ae;
 
-  --primary: #10b981;
-  --primary-2: #059669;
-  --primary-soft: #d1fae5;
+  --primary: #7c3aed;
+  --primary-2: #6d28d9;
+  --primary-soft: #ede9fe;
 
-  --accent: #f59e0b;
-  --accent-soft: #fef3c7;
+  --accent: #c084fc;
+  --accent-soft: #f3e8ff;
 
-  --border: #e5e7eb;
+  --border: #e4dcf5;
 
-  --shadow: 0 20px 45px rgba(15,23,42,.08);
+  --shadow: 0 20px 45px rgba(91, 33, 182, .08);
 
-  --ok: #10b981;
-  --danger: #ef4444;
+  --ok: #7c3aed;
+  --danger: #dc2626;
 }
 
 html[data-theme="dark"] {
-  --bg: #0b1220;
-  --bg-alt: #111827;
-  --bg-raised: #1f2937;
+  --bg: #151221;
+  --bg-alt: #1d1830;
+  --bg-raised: #27203d;
 
-  --text: #f9fafb;
-  --text-dim: #d1d5db;
-  --text-faint: #9ca3af;
+  --text: #f8f6ff;
+  --text-dim: #d4ccec;
+  --text-faint: #a89dc7;
 
-  --primary: #34d399;
-  --primary-2: #10b981;
-  --primary-soft: #064e3b;
+  --primary: #a78bfa;
+  --primary-2: #8b5cf6;
+  --primary-soft: #37245c;
 
-  --accent: #fbbf24;
-  --accent-soft: #3b2f0b;
+  --accent: #d8b4fe;
+  --accent-soft: #3a2850;
 
-  --border: #374151;
+  --border: #43355f;
 
   --shadow: 0 25px 70px rgba(0,0,0,.45);
 
-  --ok: #34d399;
-  --danger: #f87171;
+  --ok: #a78bfa;
+  --danger: #fb7185;
 }
 
 * {
@@ -112,7 +112,7 @@ h4 {
   justify-content: center;
   gap: 8px;
   padding: 11px 20px;
-  border-radius: 14px;
+  border-radius: 11px;
   font-weight: 700;
   font-size: 14.5px;
   cursor: pointer;
@@ -150,7 +150,7 @@ h4 {
 .btn-lg {
   padding: 15px 26px;
   font-size: 15.5px;
-  border-radius: 14px;
+  border-radius: 13px;
 }
 
 .card {
@@ -192,6 +192,175 @@ h4 {
 .badge-warn {
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+.badge-danger {
+  background: rgba(226, 131, 114, 0.15);
+  color: var(--danger);
+}
+
+/* — تبويبات — */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.tab {
+  position: relative;
+  padding: 12px 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-faint);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+.tab:hover {
+  color: var(--text);
+}
+.tab.active {
+  color: var(--primary);
+}
+.tab.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* — أزرار تصنيف / pills — */
+.pill-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 3px;
+}
+.pill {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-faint);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.pill.active {
+  background: var(--bg-raised);
+  color: var(--text);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+.search-input:focus {
+  border-color: var(--primary);
+}
+
+/* — صف قابل للتحديد داخل جدول المطابقة — */
+.recon-row {
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+.recon-row:hover {
+  background: var(--bg-alt);
+}
+.recon-row.selected {
+  background: var(--primary-soft);
+  outline: 1px solid var(--primary);
+  outline-offset: -1px;
+}
+.recon-row.matched {
+  opacity: 0.6;
+}
+
+/* — مفتاح تبديل (Toggle Switch) — */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch-track {
+  position: absolute;
+  inset: 0;
+  background: var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.switch-track::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 3px;
+  top: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+.switch input:checked + .switch-track {
+  background: var(--primary);
+}
+.switch input:checked + .switch-track::before {
+  transform: translateX(-18px);
+}
+
+/* — منطقة السحب والإفلات لرفع الملفات — */
+.dropzone {
+  border: 1.5px dashed var(--border);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--bg-alt);
+  transition: border-color 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+}
+.dropzone:hover,
+.dropzone.dragging {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+/* — شريط تقدّم أفقي بسيط للتحليلات — */
+.bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--bg-alt);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
 }
 
 input {
