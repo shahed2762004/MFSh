@@ -31,5 +31,162 @@
     { "id": "tx_7", "tenantId": "t_demo", "source": "Excel يدوي", "branch": "فرع رام الله", "amount": 430.2, "status": "exception", "note": "فرق مبلغ قدره 12.5 ₪", "date": "2026-07-12" },
     { "id": "tx_8", "tenantId": "t_retail", "source": "جوال باي", "branch": "الفرع الرئيسي", "amount": 76.0, "status": "matched", "matchedWith": "دفتر الأستاذ #221", "date": "2026-07-12" },
     { "id": "tx_9", "tenantId": "t_retail", "source": "بال باي", "branch": "الفرع الرئيسي", "amount": 141.3, "status": "exception", "note": "بانتظار مطابقة يدوية", "date": "2026-07-12" }
+  ],
+  "ledgerEntries": [
+    {
+      "id": "lg_1",
+      "tenantId": "t_demo",
+      "ref": "INV-2026-001",
+      "description": "دفعة Al-Othaim Markets",
+      "amount": 10420,
+      "date": "2026-07-01",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_2",
+      "tenantId": "t_demo",
+      "ref": "ARM-072",
+      "description": "وقود ورسوم خدمة Aramco",
+      "amount": 2430,
+      "date": "2026-07-02",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_3",
+      "tenantId": "t_demo",
+      "ref": "STC-9871",
+      "description": "اشتراك STC Cloud - يوليو",
+      "amount": 640,
+      "date": "2026-07-03",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_4",
+      "tenantId": "t_demo",
+      "ref": "INV-2026-004",
+      "description": "مبيعات Jarir Bookstores",
+      "amount": 8900,
+      "date": "2026-07-04",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_5",
+      "tenantId": "t_demo",
+      "ref": "RENT-Q3",
+      "description": "دفعة إيجار المكتب Q3",
+      "amount": 15000,
+      "date": "2026-07-05",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_6",
+      "tenantId": "t_demo",
+      "ref": "INV-2026-005",
+      "description": "دفعة Panda Retail Co.",
+      "amount": 22150,
+      "date": "2026-07-06",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_7",
+      "tenantId": "t_demo",
+      "ref": "FL-22",
+      "description": "تصميم بانر - خدمات تصميم",
+      "amount": 1300,
+      "date": "2026-07-06",
+      "status": "unmatched"
+    },
+    {
+      "id": "lg_8",
+      "tenantId": "t_demo",
+      "ref": "PET-101",
+      "description": "مصاريف صيانة Petromin",
+      "amount": 980,
+      "date": "2026-07-06",
+      "status": "unmatched"
+    }
+  ],
+  "bankEntries": [
+    {
+      "id": "bk_1",
+      "tenantId": "t_demo",
+      "ref": "INV-2026-001",
+      "description": "...HAIM PAY RE INV-2026-001",
+      "amount": 10420,
+      "date": "2026-07-01",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_2",
+      "tenantId": "t_demo",
+      "ref": "-",
+      "description": "ARAMCO TRSF CO",
+      "amount": 2430,
+      "date": "2026-07-02",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_3",
+      "tenantId": "t_demo",
+      "ref": "STC-9871",
+      "description": "STC TELECOM SA",
+      "amount": 640,
+      "date": "2026-07-03",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_4",
+      "tenantId": "t_demo",
+      "ref": "INV-2026-004",
+      "description": "... STORE REF: INV-2026-004",
+      "amount": 8900,
+      "date": "2026-07-04",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_5",
+      "tenantId": "t_demo",
+      "ref": "RENT99",
+      "description": "...A TRANSFER Rent Office Q3",
+      "amount": 15200,
+      "date": "2026-07-05",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_6",
+      "tenantId": "t_demo",
+      "ref": "INV-2026-005",
+      "description": "PANDA RETAIL CO PMT",
+      "amount": 22150,
+      "date": "2026-07-06",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_7",
+      "tenantId": "t_demo",
+      "ref": "FEE-991",
+      "description": "...Y BANK SERVICE FEE Alinma",
+      "amount": 145,
+      "date": "2026-07-06",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_8",
+      "tenantId": "t_demo",
+      "ref": "-",
+      "description": "...T DEPOSIT CASH REVENUE",
+      "amount": 3200,
+      "date": "2026-07-07",
+      "status": "unmatched"
+    },
+    {
+      "id": "bk_9",
+      "tenantId": "t_demo",
+      "ref": "PET-2231",
+      "description": "...MIN CO SERVICE CHARGES",
+      "amount": 890,
+      "date": "2026-07-07",
+      "status": "unmatched"
+    }
   ]
 }
